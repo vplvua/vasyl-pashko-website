@@ -1,0 +1,24 @@
+:root {
+  /* COLORS */
+  --color-black: #0c1416;
+  --color-orange: #f4724e;
+  --color-yellow: #fdc62e;
+  --color-violet: #e339fc;
+  --color-red: #ff2f00;
+  --color-green: #1fa95b;
+  --color-mint: #b1ebd3;
+  --color-lilac: #a49ef8;
+
+  /* GAPS */
+  --gap-xs: 4px;
+  --gap-sm: 8px;
+  --gap-md: 16px;
+  --gap-lg: 32px;
+  --gap-xl: 64px;
+  --gap-xxl: 128px;
+
+  /* WIDTH */
+  --width-sm: 592px;
+  --width-md: 794px;
+  --width-full: 100%;
+}

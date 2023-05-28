@@ -1,0 +1,89 @@
+/* ticker */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+/* plain text */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap");
+
+/*  big headers */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Oswald:wght@600&family=Roboto+Slab:wght@300&display=swap");
+
+/* для виділеного тексту на бекграунді*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+
+/* main header */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+
+:root {
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.heading-xl {
+  font-family: "Poppins", sans-serif;
+  font-size: 128px;
+  line-height: 100px;
+  -webkit-text-stroke: 1px var(--color-black);
+  color: transparent;
+  transition: color 0.5s linear;
+}
+
+/* .heading-xl:hover {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+  transition: color 0.5s linear;
+} */
+
+.heading-sm,
+.heading-md {
+  /* font-family: "Alegreya Sans SC", serif; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.heading-md {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.heading-sm {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading-xl {
+    font-size: 120px;
+    line-height: 98px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (min-width: 392px) {
+}
+
+@media screen and (max-width: 592px) {
+  .heading-xl {
+    font-size: 100px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 794px) {
+}
+
+.icon {
+  margin-top: var(--gap-md);
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.3);
+}
