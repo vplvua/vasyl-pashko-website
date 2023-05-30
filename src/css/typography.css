@@ -21,18 +21,17 @@
 
 .heading-xl {
   font-family: "Poppins", sans-serif;
-  font-size: 128px;
-  line-height: 100px;
+  font-size: 148px;
+  line-height: 120px;
   -webkit-text-stroke: 1px var(--color-black);
   color: transparent;
   transition: color 0.5s linear;
 }
 
-/* .heading-xl:hover {
-  -webkit-text-stroke: 1px black;
-  color: transparent;
-  transition: color 0.5s linear;
-} */
+.heading-xl:hover {
+  -webkit-text-stroke: var(--color-black);
+  color: var(--color-black);
+}
 
 .heading-sm,
 .heading-md {
@@ -86,4 +85,34 @@
 
 .icon:hover {
   transform: scale(1.3);
+}
+
+.menu-list a {
+  text-decoration: none;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 168px;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-text-stroke: 1px var(--color-black);
+  color: transparent;
+  text-transform: uppercase;
+  line-height: 130px;
+  overflow: hidden;
+  transform: rotateY(-30deg);
+  padding-right: var(--gap-md);
+  transform-origin: right center;
+  transition: transform 0.5s linear, color 0.5s linear;
+}
+
+.menu-list a:hover {
+  -webkit-text-stroke: 1px var(fff);
+  color: var(--color-black);
+  transform: rotateY(-15deg);
+}
+
+.menu-list a:hover ~ a {
+  transform: rotateY(-30deg);
+  color: transparent;
 }
