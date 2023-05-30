@@ -121,9 +121,9 @@ body {
     justify-content: space-between;
   }
 
-  .right {
+  /* .right {
     padding: auto 0;
-  }
+  } */
 }
 
 main {
