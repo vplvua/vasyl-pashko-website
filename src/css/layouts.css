@@ -113,12 +113,17 @@ body {
     height: 100%;
   }
 
-  .home-wrapper {
+  .flex-wrapper {
     width: 100%;
-    padding-left: 12vw;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .home-padding {
+    padding-left: 12vw;
   }
 
   /* .right {
@@ -176,4 +181,56 @@ footer {
 
 .perspective {
   perspective: 1000px;
+}
+
+.frame {
+  width: 450px;
+  height: 450px;
+  /* clip-path: polygon(
+    50% 0%,
+    66% 10%,
+    83% 12%,
+    89% 32%,
+    100% 43%,
+    94% 60%,
+    94% 78%,
+    78% 87%,
+    68% 100%,
+    50% 95%,
+    32% 100%,
+    22% 87%,
+    6% 78%,
+    6% 60%,
+    0% 43%,
+    16% 32%,
+    17% 12%,
+    33% 10%
+  ); */
+  clip-path: polygon(
+    92.5% 50%,
+    96.98% 32.9%,
+    82.56% 22.68%,
+    75% 6.7%,
+    57.38% 8.15%,
+    41.32% 0.76%,
+    28.75% 13.19%,
+    11.7% 17.86%,
+    10.06% 35.46%,
+    0% 50%,
+    10.06% 64.54%,
+    11.7% 82.14%,
+    28.75% 86.81%,
+    41.32% 99.24%,
+    57.38% 91.85%,
+    75% 93.3%,
+    82.56% 77.32%,
+    96.98% 67.1%
+  );
+  margin: 0 auto;
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
