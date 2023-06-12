@@ -1,6 +1,6 @@
 const burgerToggle = document.getElementById("burger-toggle");
 const sections = document.querySelectorAll("section.page-main");
-const menuLinks = document.querySelectorAll(".menu-item");
+const menuLinks = document.querySelectorAll(".link-href");
 console.log(menuLinks);
 
 burgerToggle.addEventListener("change", () => {
