@@ -326,3 +326,51 @@ footer {
 .link:hover span {
   transform: translate3d(0, -200%, 0);
 }
+
+#grid {
+  height: 100vh;
+  transition: 500ms;
+  display: grid;
+  grid-template-columns: 2.4fr 0.3fr 0.3fr;
+  gap: 2px;
+  background: var(--color-black);
+}
+
+:where(.first-column, .second-column, .third-column) {
+  background: navajowhite;
+  transition: 300ms;
+}
+
+/* :where(.first-column, .second-column, .third-column):hover {
+  background: crimson;
+} */
+
+#grid:has(.first-column:hover) {
+  grid-template-columns: 2.4fr 0.3fr 0.3fr;
+}
+
+#grid:has(.second-column:hover) {
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+}
+
+#grid:has(.third-column:hover) {
+  grid-template-columns: 0.3fr 0.3fr 2.4fr;
+}
+
+.skill-wrapper {
+  width: 75vw;
+  position: absolute;
+  overflow: hidden;
+}
+
+.first-part {
+  z-index: 1;
+}
+
+.second-part {
+  z-index: 2;
+}
+
+.third-part {
+  z-index: 3;
+}
