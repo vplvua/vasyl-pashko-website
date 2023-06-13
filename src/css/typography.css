@@ -122,4 +122,24 @@
     font-size: 1.3rem;
     padding: var(--gap-sm) 0;
   }
+
+  .skill-header {
+    width: 180px;
+    height: 100%;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+  }
+
+  .skill-header h1 {
+    transform: rotate(180deg);
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 148px;
+    font-style: normal;
+    font-stretch: normal;
+    -webkit-text-stroke: 1px var(--color-black);
+    color: transparent;
+    line-height: 130px;
+    text-transform: uppercase;
+  }
 }
