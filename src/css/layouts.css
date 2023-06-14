@@ -145,15 +145,15 @@ body {
     transition: 300ms;
   }
 
-  #grid:has(.first-column:hover) {
+  #skill-page-grid:has(.first-column:hover) {
     grid-template-columns: 2.4fr 0.3fr 0.3fr;
   }
 
-  #grid:has(.second-column:hover) {
+  #skill-page-grid:has(.second-column:hover) {
     grid-template-columns: 0.3fr 2.4fr 0.3fr;
   }
 
-  #grid:has(.third-column:hover) {
+  #skill-page-grid:has(.third-column:hover) {
     grid-template-columns: 0.3fr 0.3fr 2.4fr;
   }
 
@@ -188,9 +188,17 @@ body {
   }
 
   .skill-content > p {
-    margin-top: 3vh;
+    margin-top: 1rem;
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-red);
+  }
+
+  .skill-content > p span {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-black);
   }
 
   .skill-wrapper img {
@@ -210,10 +218,10 @@ body {
   .skill-flex-wrapper > div {
     transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    margin-right: 30px;
+    margin-left: 25px;
   }
 
   .skill-flex-wrapper > div:hover {
@@ -223,6 +231,9 @@ body {
   .skill-flex-wrapper > div span {
     display: block;
     text-align: center;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
   }
 }
 
