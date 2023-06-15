@@ -145,7 +145,7 @@ body {
     transition: 300ms;
   }
 
-  #skill-page-grid:has(.first-column:hover) {
+  /* #skill-page-grid:has(.first-column:hover) {
     grid-template-columns: 2.4fr 0.3fr 0.3fr;
   }
 
@@ -155,6 +155,18 @@ body {
 
   #skill-page-grid:has(.third-column:hover) {
     grid-template-columns: 0.3fr 0.3fr 2.4fr;
+  } */
+
+  #skills:hover #skill-page-grid {
+    grid-template-columns: 2.4fr 0.3fr 0.3fr;
+  }
+
+  #skills:hover #skill-page-grid .second-column {
+    grid-column-start: 2;
+  }
+
+  #skills:hover #skill-page-grid .third-column {
+    grid-column-start: 3;
   }
 
   .skill-wrapper {
