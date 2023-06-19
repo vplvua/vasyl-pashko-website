@@ -145,7 +145,7 @@ body {
     transition: 300ms;
   }
 
-  /* #skill-page-grid:has(.first-column:hover) {
+  #skill-page-grid:has(.first-column:hover) {
     grid-template-columns: 2.4fr 0.3fr 0.3fr;
   }
 
@@ -155,9 +155,9 @@ body {
 
   #skill-page-grid:has(.third-column:hover) {
     grid-template-columns: 0.3fr 0.3fr 2.4fr;
-  } */
+  }
 
-  #skills:hover #skill-page-grid {
+  /* #skills:hover #skill-page-grid {
     grid-template-columns: 2.4fr 0.3fr 0.3fr;
   }
 
@@ -167,7 +167,7 @@ body {
 
   #skills:hover #skill-page-grid .third-column {
     grid-column-start: 3;
-  }
+  } */
 
   .skill-wrapper {
     width: 75vw;
@@ -185,12 +185,12 @@ body {
   }
 
   .second-column {
-    background-color: var(--color-orange);
+    background-color: var(--color-lilac);
     z-index: 2;
   }
 
   .third-column {
-    background-color: var(--color-lilac);
+    background-color: var(--color-green);
     z-index: 3;
   }
 

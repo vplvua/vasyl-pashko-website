@@ -26,6 +26,7 @@
   -webkit-text-stroke: 1px var(--color-black);
   color: transparent;
   transition: color 0.5s linear;
+  cursor: default;
 }
 
 .heading-xl:hover {
@@ -141,5 +142,6 @@
     color: transparent;
     line-height: 130px;
     text-transform: uppercase;
+    cursor: default;
   }
 }
