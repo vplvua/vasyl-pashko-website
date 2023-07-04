@@ -124,14 +124,14 @@
     padding: var(--gap-sm) 0;
   }
 
-  .skill-header {
+  .skills-header {
     width: 180px;
     height: 100%;
     writing-mode: vertical-lr;
     text-orientation: mixed;
   }
 
-  .skill-header h1 {
+  .skills-header h1 {
     transform: rotate(180deg);
     font-family: "Poppins", sans-serif;
     font-weight: 900;
@@ -143,5 +143,24 @@
     line-height: 130px;
     text-transform: uppercase;
     cursor: default;
+  }
+
+  .terrorist-state-language {
+    font-size: 0.5rem;
+  }
+
+  .language-content h2,
+  .language-content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    margin-left: 1rem;
+  }
+
+  .language-content h2 {
+    font-weight: 900;
+  }
+
+  .language-content h3 {
+    font-weight: 600;
   }
 }
