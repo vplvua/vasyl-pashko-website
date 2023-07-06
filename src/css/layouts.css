@@ -189,7 +189,7 @@ body {
   }
 
   .education-content {
-    width: 60vw;
+    max-width: 60vw;
     height: 100%;
     padding-left: 3vw;
   }
@@ -260,9 +260,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* outline: 2px solid var(--color-black); */
     padding: 0.5rem;
-    /* margin-top: 1rem; */
     transition: color 0.3s ease, background-color 0.3s ease;
   }
 
@@ -279,10 +277,6 @@ body {
     background-color: var(--color-red);
     color: white;
   }
-  /* 
-  .education-column .skills-wrapper {
-    width: 100%;
-  } */
 
   .education-content .flex-wrapper {
     justify-content: space-between;
@@ -302,6 +296,70 @@ body {
   .education-column__education-header span a {
     color: var(--color-black);
     text-decoration: none;
+  }
+
+  .moving_icons img {
+    margin: var(--gap-md) var(--gap-md) 0 0;
+    width: 60px;
+    animation: moving-icons-animation 1s infinite;
+  }
+
+  @keyframes moving-icons-animation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .projects-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5vw;
+  }
+
+  .project-card {
+    width: 450px;
+    height: 65vh;
+    border: 2px solid var(--color-black);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  .project-image {
+    align-self: flex-start;
+    padding: 1rem;
+  }
+
+  .project-description {
+    margin-top: auto;
+  }
+
+  .project-date {
+    align-self: flex-end;
+  }
+
+  .project-description,
+  .project-date {
+    width: 100%;
+    padding: 1rem;
+    border-top: 2px solid var(--color-black);
+  }
+
+  .project-card img {
+    width: 100%;
   }
 }
 
@@ -417,7 +475,8 @@ footer {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  margin-right: var(--gap-lg);
+  /* margin-right: var(--gap-lg); */
+  margin: 0 var(--gap-md);
 }
 
 .link::before,
