@@ -320,22 +320,30 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     /* overflow: hidden; */
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; */
     padding: 0 5vw;
+
+    overflow: scroll;
+    /* scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;  */
   }
 
   .project-card {
     width: 450px;
-    height: 65vh;
+    height: 500px;
     border: 2px solid var(--color-black);
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
     align-items: center;
     margin-right: 2rem;
+
+    scroll-snap-align: start; /* Карточки прилипатимуть до прокручування */
   }
 
   .project-image {
@@ -476,7 +484,7 @@ footer {
   position: relative;
   display: inline-block;
   /* margin-right: var(--gap-lg); */
-  margin: 0 var(--gap-md);
+  margin-right: var(--gap-lg);
 }
 
 .link::before,
