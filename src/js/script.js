@@ -27,10 +27,9 @@ function showSection(sectionId) {
   });
 }
 
-// function smoothScrollTo(target) {
-//   const targetElement = document.getElementById(target);
-//   window.scrollTo({
-//     top: targetElement.offsetTop,
-//     behavior: "smooth",
-//   });
-// }
+const scrollingWrapper = document.querySelector(".scrolling-wrapper");
+
+scrollingWrapper.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  scrollingWrapper.scrollLeft += event.deltaY;
+});

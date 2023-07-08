@@ -322,33 +322,51 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /* overflow: hidden; */
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
-    padding: 0 5vw;
-
-    overflow: scroll;
-    /* scroll-snap-type: x mandatory; 
-    scroll-behavior: smooth;  */
   }
 
-  .project-card {
-    width: 450px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrolling-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .scrolling-wrapper .project-card {
+    flex: 0 0 auto;
+    position: relative;
+    width: 500px;
     height: 500px;
+    margin-left: 5vw;
+  }
+
+  .scrolling-wrapper div:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .project-card-content {
+    width: 100%;
+    height: 100%;
     border: 2px solid var(--color-black);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
-    margin-right: 2rem;
-
-    scroll-snap-align: start; /* Карточки прилипатимуть до прокручування */
   }
 
   .project-image {
     align-self: flex-start;
-    padding: 1rem;
   }
 
   .project-description {
@@ -368,6 +386,13 @@ body {
 
   .project-card img {
     width: 100%;
+    object-fit: cover;
+  }
+
+  .projects-arrow {
+    flex: 0 0 auto;
+    position: relative;
+    margin: 5vw;
   }
 }
 
@@ -404,10 +429,10 @@ footer {
 #skills {
   background-color: var(--color-violet);
 }
-
+/* 
 #projects {
   background-color: var(--color-mint);
-}
+} */
 
 #contacts {
   background-color: var(--color-orange);
