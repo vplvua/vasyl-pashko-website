@@ -119,7 +119,8 @@
     color: transparent;
   }
 
-  p {
+  p,
+  .scroll-down span {
     font-size: 1.3rem;
     padding: var(--gap-sm) 0;
   }
@@ -155,6 +156,12 @@
   .education-content h3,
   .project-description h3 {
     font-family: "Montserrat", sans-serif;
+  }
+
+  .language-content h2,
+  .language-content h3,
+  .education-content h2,
+  .education-content h3 {
     font-size: 28px;
     margin-left: 1rem;
   }
@@ -167,5 +174,16 @@
   .language-content h3,
   .education-content h3 {
     font-weight: 600;
+  }
+
+  .project-description h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .project-date {
+    font-size: 1.3rem;
+    padding: var(--gap-sm) 0;
+    text-transform: uppercase;
   }
 }

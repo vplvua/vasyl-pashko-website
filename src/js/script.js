@@ -33,3 +33,11 @@ scrollingWrapper.addEventListener("wheel", (event) => {
   event.preventDefault();
   scrollingWrapper.scrollLeft += event.deltaY;
 });
+
+const projectCard = document.querySelectorAll(".project-card");
+
+projectCard.forEach((card) => {
+  card.addEventListener("click", function () {
+    this.classList.toggle("flipped");
+  });
+});
