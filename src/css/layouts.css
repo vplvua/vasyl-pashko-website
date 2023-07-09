@@ -401,7 +401,7 @@ body {
   .project-name,
   .project-date,
   .project-technologies,
-  .project-links a {
+  .project-link-block {
     padding: 1rem;
   }
 
@@ -427,7 +427,7 @@ body {
     align-items: center;
   }
 
-  .project-links a {
+  .project-link-block {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -438,7 +438,7 @@ body {
     color: var(--color-black);
   }
 
-  .project-links a:nth-child(2) {
+  .project-link-block:nth-child(2) {
     border-left: 2px solid var(--color-black);
   }
 
@@ -564,6 +564,9 @@ footer {
   position: relative;
   display: inline-block;
   /* margin-right: var(--gap-lg); */
+}
+
+.link-margin {
   margin-right: var(--gap-lg);
 }
 

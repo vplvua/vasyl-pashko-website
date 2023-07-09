@@ -185,7 +185,8 @@
   .project-technologies,
   .project-links a {
     font-size: 1.3rem;
-    padding: var(--gap-sm) 0;
+    color: var(--color-black);
+    /* padding: var(--gap-sm) 0; */
   }
 
   .project-date {
