@@ -154,7 +154,7 @@
   .language-content h3,
   .education-content h2,
   .education-content h3,
-  .project-description h3 {
+  .project-name h3 {
     font-family: "Montserrat", sans-serif;
   }
 
@@ -176,14 +176,19 @@
     font-weight: 600;
   }
 
-  .project-description h3 {
+  .project-name h3 {
     font-size: 24px;
     margin: 0;
   }
 
-  .project-date {
+  .project-date,
+  .project-technologies,
+  .project-links a {
     font-size: 1.3rem;
     padding: var(--gap-sm) 0;
+  }
+
+  .project-date {
     text-transform: uppercase;
   }
 }

@@ -154,35 +154,3 @@
 .project-card.flipped .project-card-back-content {
   transform: rotateY(360deg);
 }
-
-/* .project-card.flipped .project-card-content {
-  animation: flipToBack 2s forwards;
-}
-
-.project-card.flipped .project-card-back-content {
-  animation: flipToFront 2s forwards;
-}
-
-@keyframes flipToBack {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(180deg);
-  }
-}
-
-@keyframes flipToFront {
-  0% {
-    transform: rotateY(180deg);
-  }
-  50% {
-    transform: rotateY(270deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-} */

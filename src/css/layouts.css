@@ -350,7 +350,7 @@ body {
   .scrolling-wrapper .project-card {
     flex: 0 0 auto;
     width: 500px;
-    height: 500px;
+    height: 514px;
     margin-left: 5vw;
   }
 
@@ -358,36 +358,59 @@ body {
     margin-left: 0;
   }
 
-  .project-card .project-card-content,
-  .project-card .project-card-back-content {
+  .project-card-content,
+  .project-card-back-content {
     width: 100%;
     height: 100%;
     border: 2px solid var(--color-black);
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background: var(--color-mint); */
   }
 
-  .project-image {
-    align-self: flex-start;
-  }
-
+  .project-image,
   .project-description {
+    align-self: flex-start;
+    padding: 1rem;
+  }
+
+  .project-name,
+  .project-technologies {
     margin-top: auto;
   }
 
-  .project-date {
+  .project-date,
+  .project-links {
     align-self: flex-end;
   }
 
-  .project-description,
-  .project-date {
+  .project-name,
+  .project-date,
+  .project-links,
+  .project-technologies {
     width: 100%;
-    padding: 1rem;
     border-top: 2px solid var(--color-black);
   }
+  /* 
+  .project-name:hover {
+    background-color: var(--color-red);
+    color: white;
+  } */
 
-  .project-card img {
+  .project-name,
+  .project-date,
+  .project-technologies,
+  .project-links a {
+    padding: 1rem;
+  }
+
+  .project-links img {
+    width: 24px;
+    margin-right: 10px;
+  }
+
+  .project-image img {
     width: 100%;
     object-fit: cover;
   }
@@ -398,10 +421,28 @@ body {
     margin: 5vw;
   }
 
+  .project-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .project-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    color: var(--color-black);
+  }
+
+  .project-links a:nth-child(2) {
+    border-left: 2px solid var(--color-black);
+  }
+
   .scroll-down {
-    /* position: absolute;
-    right: 30px;
-    bottom: 70px; */
     width: 60px;
     height: 60px;
     text-align: center;
@@ -439,15 +480,17 @@ footer {
 }
 
 #skills {
-  background-color: var(--color-violet);
+  background-color: var(--color-green);
 }
-/* 
+
 #projects {
+  /* background-color: var(--color-orange); */
   background-color: var(--color-mint);
-} */
+}
 
 #contacts {
   background-color: var(--color-orange);
+  /* background-color: var(--color-mint); */
 }
 
 .menu-list {
