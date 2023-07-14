@@ -152,27 +152,27 @@
 
   .language-content h2,
   .language-content h3,
-  .education-content h2,
-  .education-content h3,
+  /* .education-content h2,
+  .education-content h3, */
   .project-name h3 {
     font-family: "Montserrat", sans-serif;
   }
 
   .language-content h2,
-  .language-content h3,
-  .education-content h2,
-  .education-content h3 {
+  .language-content h3
+  /* .education-content h2,
+  .education-content h3  */ {
     font-size: 28px;
     margin-left: 1rem;
   }
 
-  .language-content h2,
-  .education-content h2 {
+  .language-content h2
+  /* .education-content h2  */ {
     font-weight: 900;
   }
 
-  .language-content h3,
-  .education-content h3 {
+  .language-content h3
+  /* .education-content h3  */ {
     font-weight: 600;
   }
 
