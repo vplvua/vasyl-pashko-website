@@ -317,6 +317,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
+    width: 80%;
   }
 
   .timeline:before {
@@ -333,11 +334,31 @@ body {
   .timeline-item {
     position: relative;
     padding: 20px 20px 20px 0;
+    opacity: 0;
+  }
+
+  .timeline-item:nth-child(odd) {
+    animation-delay: 1s;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .timeline-item.fade-in {
+    animation: fade-in 0.5s ease forwards;
   }
 
   .timeline-date {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     background-color: var(--color-red);
     color: white;
     font-size: 28px;
@@ -348,9 +369,15 @@ body {
 
   .timeline-content h2 {
     font-weight: 900;
-    margin: 1rem 1rem 0 1rem;
+    margin: 0;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     font-size: 28px;
     font-family: Montserrat, sans-serif;
+  }
+
+  .timeline-content p {
+    margin: 0 0 0 1rem;
+    padding: 0;
   }
 
   .timeline-content a {
