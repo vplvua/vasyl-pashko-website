@@ -1,7 +1,6 @@
 const burgerToggle = document.getElementById("burger-toggle");
 const sections = document.querySelectorAll("section.page-main");
 const menuLinks = document.querySelectorAll(".link-href");
-console.log(menuLinks);
 
 burgerToggle.addEventListener("change", () => {
   if (burgerToggle.checked) {
@@ -43,35 +42,3 @@ projectCard.forEach((card) => {
     this.classList.toggle("flipped");
   });
 });
-
-// TimeLine Animation
-
-const timelineItems = document.querySelectorAll(".timeline-item");
-
-function isInViewport(element) {
-  const skillsPageGrid = document.querySelector("#skills-page-grid");
-  if (!skillsPageGrid) {
-    return false;
-  }
-
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function checkTimelineItems() {
-  timelineItems.forEach((item) => {
-    if (isInViewport(item)) {
-      item.classList.add("fade-in");
-    }
-  });
-}
-
-window.addEventListener("load", checkTimelineItems);
-
-window.addEventListener("scroll", checkTimelineItems);
