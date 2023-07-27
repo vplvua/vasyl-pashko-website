@@ -1,3 +1,7 @@
 /node_modules
 /dist
 /.parcel-cache
+/src/php
+/src/composer.json
+/src/composer.lock
+/vendor

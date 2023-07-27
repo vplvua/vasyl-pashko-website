@@ -42,3 +42,29 @@ projectCard.forEach((card) => {
     this.classList.toggle("flipped");
   });
 });
+
+// Send message
+
+const form = document.getElementById("send-email-form");
+const successMessage = document.getElementById("success-message");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => {
+      if (response.ok) {
+        successMessage.style.display = "block";
+        form.reset();
+      } else {
+        alert("Form submission failed!");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});

@@ -131,6 +131,10 @@ body {
     width: 45vw;
   }
 
+  /*======================================================================*/
+  /*========================== Skills ====================================*/
+  /*======================================================================*/
+
   #skills-page-grid {
     height: 100vh;
     transition: 500ms;
@@ -266,6 +270,7 @@ body {
 
   .language-column__language-header {
     justify-content: flex-start;
+    margin-top: 1.2rem;
   }
 
   .education-column__education-header {
@@ -299,6 +304,8 @@ body {
   }
 
   /*======================================================================*/
+  /*=========================== Timeline =================================*/
+  /*======================================================================*/
 
   .education-content {
     position: sticky;
@@ -310,7 +317,7 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 80%;
+    width: 82%;
   }
 
   .timeline {
@@ -335,28 +342,25 @@ body {
     display: block;
     position: absolute;
     top: 0;
-    left: 150px;
+    left: 175px;
     width: 0;
     height: 100%;
-    /* border: 2px dashed var(--color-red); */
     border: 2px solid var(--color-red);
   }
 
   .timeline-item {
-    margin: 45px 0px 45px 180px;
+    margin: 45px 0px 45px 200px;
     position: relative;
     padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     /* border-radius: 10px; */
-    width: 80%;
+    /* width: 80%; */
   }
 
   .timeline-item > span {
     content: "";
     display: block;
     width: 0;
-    /* height: 100%; */
-    /* border: 2px solid var(--color-red); */
     position: absolute;
     top: 40px;
     left: -30px;
@@ -371,7 +375,7 @@ body {
     background: var(--color-red);
     border: 2px solid var(--color-red);
     position: absolute;
-    left: -5px;
+    /* left: -5px; */
   }
 
   .timeline-item > span:before {
@@ -381,9 +385,14 @@ body {
   .timeline-date {
     position: absolute;
     left: -180px;
-    top: 20px;
+    top: 25px;
     display: block;
-    padding: 0.5rem;
+    width: 135px;
+    text-align: right;
+  }
+
+  .timeline-date span {
+    padding: 0.5rem 0.7rem;
     background-color: var(--color-red);
     color: white;
     font-size: 28px;
@@ -393,27 +402,30 @@ body {
   }
 
   .timeline-content h2 {
-    font-weight: 900;
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 28px;
-    font-family: Montserrat, sans-serif;
+    margin-bottom: 0.8rem;
   }
-
-  /* .timeline-content p {
-    margin: 0 0 0 1rem;
-    padding: 0;
-  } */
 
   .timeline-content a {
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font-size: 1.3rem;
     color: var(--color-black);
     text-decoration: none;
   }
 
+  .timeline-content img {
+    margin-bottom: 2px;
+    margin-left: 0.5rem;
+  }
+
+  .timeline-content p {
+    margin-left: 0.5rem;
+    padding: 0;
+  }
+
   /*========================================================================*/
+  /*======================================================================*/
+  /*======================================================================*/
 
   .moving_icons img {
     width: 60px;
@@ -435,6 +447,10 @@ body {
   .icons-margin img {
     margin: var(--gap-md) var(--gap-md) 0 0;
   }
+
+  /*========================================================================*/
+  /*=========================== Projects ===================================*/
+  /*========================================================================*/
 
   .projects-wrapper {
     width: 100%;
@@ -583,6 +599,88 @@ body {
     line-height: 1.2rem;
     margin-right: 0.5rem;
     margin-top: 0.5rem;
+  }
+
+  /*========================================================================*/
+  /*=========================== Contacts ===================================*/
+  /*========================================================================*/
+
+  .contacts-content div:nth-child(1) {
+    width: 30%;
+  }
+
+  .contacts-content div:nth-child(2) {
+    width: 20%;
+  }
+
+  .contacts-content div:nth-child(3) {
+    width: 35%;
+  }
+
+  .contacts-content p {
+    margin: 0 var(--gap-sm);
+  }
+
+  #send-email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: var(--gap-md) 0;
+    color: var(--color-black);
+  }
+
+  #send-email-form input,
+  #send-email-form textarea {
+    margin: var(--gap-sm) 0;
+    padding: var(--gap-md);
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--color-black);
+    /* opacity: 0.8; */
+    background-color: inherit;
+    text-transform: uppercase;
+  }
+
+  #send-email-form textarea {
+    height: 100px;
+  }
+
+  #send-email-form input:hover,
+  #send-email-form textarea:hover {
+    opacity: 1;
+    color: #fff;
+    border-left: 2px solid var(--color-red);
+  }
+
+  #send-email-form input:focus,
+  #send-email-form textarea:focus {
+    opacity: 1;
+    color: #fff;
+    border: 0;
+    border-left: 2px solid var(--color-red);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+
+  #send-email-form button {
+    display: block;
+    margin: var(--gap-lg) 0;
+    padding: var(--gap-sm);
+    border: none;
+    width: 100%;
+    font-size: 28px;
+    color: var(--color-black);
+    font-weight: 600;
+    background-color: inherit;
+    text-transform: uppercase;
+  }
+
+  #send-email-form button:hover {
+    color: #fff;
+    background-color: var(--color-red);
+    cursor: pointer;
   }
 }
 
