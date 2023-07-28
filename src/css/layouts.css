@@ -36,6 +36,54 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .hide-in-small-width {
+    display: none;
+  }
+}
+
+.frame {
+  position: relative;
+  /* width: 450px;
+  height: 450px; */
+  width: 25vw;
+  height: 25vw;
+  margin: 0 auto;
+  background: black;
+  clip-path: polygon(
+    92.5% 50%,
+    96.98% 32.9%,
+    82.56% 22.68%,
+    75% 6.7%,
+    57.38% 8.15%,
+    41.32% 0.76%,
+    28.75% 13.19%,
+    11.7% 17.86%,
+    10.06% 35.46%,
+    0% 50%,
+    10.06% 64.54%,
+    11.7% 82.14%,
+    28.75% 86.81%,
+    41.32% 99.24%,
+    57.38% 91.85%,
+    75% 93.3%,
+    82.56% 77.32%,
+    96.98% 67.1%
+  );
+}
+
+.frame img {
+  position: absolute;
+  top: 2px; /* Border width */
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  width: calc(100% - 4px); /* Subtract double border width */
+  height: calc(100% - 4px);
+  object-fit: cover;
+  clip-path: inherit;
+}
+
 @media screen and (min-width: 768px) {
   body {
     --indent: minmax(0, 1fr);
@@ -123,12 +171,38 @@ body {
   }
 
   .home-padding {
-    padding-left: 10vw;
+    padding-left: 6vw;
   }
 
   .half-width {
-    max-width: 50%;
-    width: 45vw;
+    width: 80%;
+    max-width: 80%;
+  }
+
+  .scroll-about-me {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .about-me-flex-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .frame {
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
   }
 
   /*======================================================================*/
@@ -325,17 +399,6 @@ body {
     height: 100%;
     overflow-y: auto;
   }
-
-  /* .timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 3px;
-    height: 100%;
-    background-color: var(--color-red);
-    transform: translateX(-50%);
-  } */
 
   .timeline:before {
     content: "";
@@ -610,7 +673,7 @@ body {
   }
 
   .contacts-content div:nth-child(2) {
-    width: 20%;
+    min-width: 20%;
   }
 
   .contacts-content div:nth-child(3) {
@@ -641,6 +704,7 @@ body {
     /* opacity: 0.8; */
     background-color: inherit;
     text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
   }
 
   #send-email-form textarea {
@@ -660,7 +724,6 @@ body {
     color: #fff;
     border: 0;
     border-left: 2px solid var(--color-red);
-    background: rgba(255, 255, 255, 0.1);
     outline: none;
   }
 
@@ -681,6 +744,39 @@ body {
     color: #fff;
     background-color: var(--color-red);
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .home-padding {
+    padding-left: 10vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-me-flex-wrapper {
+    flex-direction: row;
+  }
+
+  .half-width {
+    max-width: 50%;
+    width: 45vw;
+  }
+
+  .frame {
+    width: calc(100vw * 450 / 1300);
+    height: calc(100vw * 450 / 1300);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .about-me-flex-wrapper {
+    height: 100%;
+  }
+
+  .frame {
+    width: 450px;
+    height: 450px;
   }
 }
 
@@ -738,46 +834,6 @@ footer {
   perspective: 1000px;
 }
 
-.frame {
-  position: relative;
-  width: 450px;
-  height: 450px;
-  margin: 0 auto;
-  background: black;
-  clip-path: polygon(
-    92.5% 50%,
-    96.98% 32.9%,
-    82.56% 22.68%,
-    75% 6.7%,
-    57.38% 8.15%,
-    41.32% 0.76%,
-    28.75% 13.19%,
-    11.7% 17.86%,
-    10.06% 35.46%,
-    0% 50%,
-    10.06% 64.54%,
-    11.7% 82.14%,
-    28.75% 86.81%,
-    41.32% 99.24%,
-    57.38% 91.85%,
-    75% 93.3%,
-    82.56% 77.32%,
-    96.98% 67.1%
-  );
-}
-
-.frame img {
-  position: absolute;
-  top: 2px; /* Border width */
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
-  width: calc(100% - 4px); /* Subtract double border width */
-  height: calc(100% - 4px);
-  object-fit: cover;
-  clip-path: inherit;
-}
-
 .small-navigation {
   display: flex;
   flex-direction: row;
@@ -798,7 +854,6 @@ footer {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  /* margin-right: var(--gap-lg); */
 }
 
 .link-margin {

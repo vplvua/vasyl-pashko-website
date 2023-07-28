@@ -1,3 +1,7 @@
+/*=========================================================*/
+/*=================== Main page animation =================*/
+/*=========================================================*/
+
 .change-my-role {
   height: 48px;
   display: flex;
@@ -65,6 +69,58 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .change-my-role {
+    height: calc(100vw * 48 / 1000);
+  }
+
+  .animation {
+    height: calc(100vw * 48 / 1000);
+  }
+
+  .animation > div > div {
+    height: calc(100vw * 48 / 1000);
+    margin-bottom: calc(100vw * 48 / 1000);
+  }
+
+  @keyframes text-changing {
+    0% {
+      margin-top: 0;
+    }
+    10% {
+      margin-top: 0;
+    }
+    20% {
+      margin-top: calc(100vw * -96 / 1000);
+    }
+    30% {
+      margin-top: calc(100vw * -96 / 1000);
+    }
+    40% {
+      margin-top: calc(100vw * -192 / 1000);
+    }
+    60% {
+      margin-top: calc(100vw * -192 / 1000);
+    }
+    70% {
+      margin-top: calc(100vw * -96 / 1000);
+    }
+    80% {
+      margin-top: calc(100vw * -96 / 1000);
+    }
+    90% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+}
+
+/*=========================================================*/
+/*====================== Ticker ===========================*/
+/*=========================================================*/
+
 .ticker {
   overflow: hidden;
   position: relative;
@@ -118,6 +174,10 @@
     transform: translate(-100%, 0);
   }
 }
+
+/*=========================================================*/
+/*=================== Projects cards ======================*/
+/*=========================================================*/
 
 .project-card {
   position: relative;
