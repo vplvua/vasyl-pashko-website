@@ -1,7 +1,10 @@
 :root {
-  --min-width: 708px;
+  /* --min-width: 708px;
   --max-width: 1920px;
-  --max-height: 1080px;
+  --max-height: 1080px; */
+  --min-width: 668px;
+  --max-width: 1820px;
+  --max-height: 980px;
   background-color: var(--color-red);
 }
 
@@ -33,12 +36,6 @@ body {
 
   nav {
     height: 45px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .hide-in-small-width {
-    display: none;
   }
 }
 
@@ -78,10 +75,145 @@ body {
   bottom: 2px;
   left: 2px;
   right: 2px;
-  width: calc(100% - 4px); /* Subtract double border width */
+  width: calc(100% - 4px);
   height: calc(100% - 4px);
   object-fit: cover;
   clip-path: inherit;
+}
+
+.skills-column {
+  background-color: var(--color-yellow);
+  z-index: 1;
+}
+
+.language-column {
+  background-color: var(--color-lilac);
+  z-index: 2;
+}
+
+.education-column {
+  background-color: var(--color-green);
+  z-index: 3;
+}
+
+@media screen and (max-width: 1200px) {
+  .hide-in-small-width {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #skills-page-grid {
+    width: calc(100vw - 100px);
+    height: calc(100vh - 100px);
+    transition: 500ms;
+    display: grid;
+    grid-template-rows: 2.4fr 0.3fr 0.3fr;
+    gap: 2px;
+    background: var(--color-black);
+    margin-bottom: 100px;
+  }
+
+  :where(.skills-column, .language-column, .education-column) {
+    background: inherit;
+    transition: 300ms;
+  }
+
+  #skills-page-grid:has(.skills-column:hover) {
+    grid-template-rows: 2.4fr 0.3fr 0.3fr;
+  }
+
+  #skills-page-grid:has(.language-column:hover) {
+    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  }
+
+  #skills-page-grid:has(.education-column:hover) {
+    grid-template-rows: 0.3fr 0.3fr 2.4fr;
+  }
+
+  .skills-content {
+    padding-left: 0;
+  }
+
+  .skills-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .language-content {
+    padding: 0 10vw 0 5vw;
+  }
+
+  .scroll-language {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    padding-top: 130px;
+  }
+
+  .language-content {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  .education-content {
+    width: 100%;
+    height: 63%;
+  }
+
+  .contacts-flex-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .contacts-additional-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .scroll-contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .contacts-wrapper {
+    overflow-y: scroll;
+  }
+
+  .email-form {
+    width: 80vw;
+  }
+
+  .contacts-flex-wrapper {
+    justify-content: flex-start;
+  }
+
+  .lets-connect {
+    padding: 2rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -129,6 +261,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    /* width: 100%; */
+    /* width: calc(100vw - 100px); */
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -208,69 +342,6 @@ body {
   /*======================================================================*/
   /*========================== Skills ====================================*/
   /*======================================================================*/
-
-  #skills-page-grid {
-    height: 100vh;
-    transition: 500ms;
-    display: grid;
-    grid-template-columns: 2.4fr 0.3fr 0.3fr;
-    gap: 2px;
-    background: var(--color-black);
-  }
-
-  :where(.skills-column, .language-column, .education-column) {
-    background: inherit;
-    transition: 300ms;
-  }
-
-  #skills-page-grid:has(.skills-column:hover) {
-    grid-template-columns: 2.4fr 0.3fr 0.3fr;
-  }
-
-  #skills-page-grid:has(.language-column:hover) {
-    grid-template-columns: 0.3fr 2.4fr 0.3fr;
-  }
-
-  #skills-page-grid:has(.education-column:hover) {
-    grid-template-columns: 0.3fr 0.3fr 2.4fr;
-  }
-
-  .skills-wrapper {
-    width: 75vw;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .skills-column {
-    background-color: var(--color-yellow);
-    z-index: 1;
-  }
-
-  .language-column {
-    background-color: var(--color-lilac);
-    z-index: 2;
-  }
-
-  .education-column {
-    background-color: var(--color-green);
-    z-index: 3;
-  }
-
-  .skills-content,
-  .language-content {
-    max-width: 50vw;
-    padding-left: 5vw;
-  }
-
-  .education-content {
-    max-width: 60vw;
-    height: 100%;
-    /* padding-left: 3vw; */
-  }
 
   .skills-content > h3 {
     margin: 0.5rem 0;
@@ -383,7 +454,6 @@ body {
 
   .education-content {
     position: sticky;
-    width: 60vw;
   }
 
   .scroll-timeline {
@@ -416,8 +486,6 @@ body {
     position: relative;
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
-    /* border-radius: 10px; */
-    /* width: 80%; */
   }
 
   .timeline-item > span {
@@ -526,18 +594,17 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
-
+  /* 
   * {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
+  } */
 
   .scrolling-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
     overflow-x: auto;
-
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -668,18 +735,6 @@ body {
   /*=========================== Contacts ===================================*/
   /*========================================================================*/
 
-  .contacts-content div:nth-child(1) {
-    width: 30%;
-  }
-
-  .contacts-content div:nth-child(2) {
-    min-width: 20%;
-  }
-
-  .contacts-content div:nth-child(3) {
-    width: 35%;
-  }
-
   .contacts-content p {
     margin: 0 var(--gap-sm);
   }
@@ -745,6 +800,16 @@ body {
     background-color: var(--color-red);
     cursor: pointer;
   }
+
+  .scroll-contacts {
+    height: 100%;
+    width: 100%;
+  }
+
+  .contacts-wrapper {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -767,6 +832,97 @@ body {
     width: calc(100vw * 450 / 1300);
     height: calc(100vw * 450 / 1300);
   }
+
+  /*======================================================================*/
+  /*========================== Skills ====================================*/
+  /*======================================================================*/
+
+  #skills-page-grid {
+    width: 100%;
+    height: 100vh;
+    transition: 500ms;
+    display: grid;
+    grid-template-columns: 2.4fr 0.3fr 0.3fr;
+    gap: 2px;
+    background: var(--color-black);
+  }
+
+  :where(.skills-column, .language-column, .education-column) {
+    background: inherit;
+    transition: 300ms;
+  }
+
+  #skills-page-grid:has(.skills-column:hover) {
+    grid-template-columns: 2.4fr 0.3fr 0.3fr;
+  }
+
+  #skills-page-grid:has(.language-column:hover) {
+    grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  }
+
+  #skills-page-grid:has(.education-column:hover) {
+    grid-template-columns: 0.3fr 0.3fr 2.4fr;
+  }
+
+  .scroll-language {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 92%;
+  }
+
+  .language-content {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding-left: 17vw;
+  }
+
+  .skills-wrapper {
+    width: 75vw;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .skills-content {
+    max-width: 50vw;
+  }
+
+  .education-content {
+    width: 60vw;
+    max-width: 55vw;
+    height: 100%;
+  }
+
+  .contacts-flex-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .contacts-content div:nth-child(1) {
+    width: 30%;
+  }
+
+  .contacts-content div:nth-child(2) {
+    min-width: 20%;
+  }
+
+  .contacts-content div:nth-child(3) {
+    width: 35%;
+  }
+
+  .contacts-content div.additional-info {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1250px) {
@@ -777,6 +933,25 @@ body {
   .frame {
     width: 450px;
     height: 450px;
+  }
+
+  .skills-content {
+    padding-left: 5vw;
+  }
+
+  .language-content {
+    height: 100%;
+    width: 100%;
+    max-width: 1050px;
+    overflow: hidden;
+    padding-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .education-content {
+    max-width: 60vw;
   }
 }
 
