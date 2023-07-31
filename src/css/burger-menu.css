@@ -11,10 +11,15 @@
 .burger-icon .middle-line {
   content: "";
   position: absolute;
-  width: 60px;
-  height: 5px;
+  width: 44px;
+  height: 4px;
   background-color: #fff;
   transition: transform 0.3s ease;
+  transform-origin: right center;
+}
+
+.middle-line {
+  display: none;
 }
 
 .burger-icon:before {
@@ -23,10 +28,6 @@
 
 .burger-icon:after {
   bottom: 0;
-}
-
-.burger-icon .middle-line {
-  top: 28px;
 }
 
 #burger-toggle {
@@ -38,15 +39,38 @@
 }
 
 #burger-toggle:checked ~ .burger-icon:before {
-  transform: rotate(45deg);
-  top: 28px;
+  transform: rotate(-22deg);
 }
 
 #burger-toggle:checked ~ .burger-icon:after {
-  transform: rotate(-45deg);
-  bottom: 28px;
+  transform: rotate(22deg);
 }
 
-#burger-toggle:checked ~ .burger-icon .middle-line {
-  opacity: 0;
+@media screen and (min-width: 768px) {
+  .burger-icon:before,
+  .burger-icon:after,
+  .burger-icon .middle-line {
+    width: 60px;
+    height: 5px;
+    transform-origin: center center;
+  }
+
+  .burger-icon .middle-line {
+    display: inline-block;
+    top: 28px;
+  }
+
+  #burger-toggle:checked ~ .burger-icon:before {
+    transform: rotate(45deg);
+    top: 28px;
+  }
+
+  #burger-toggle:checked ~ .burger-icon:after {
+    transform: rotate(-45deg);
+    bottom: 28px;
+  }
+
+  #burger-toggle:checked ~ .burger-icon .middle-line {
+    opacity: 0;
+  }
 }

@@ -1,10 +1,4 @@
 :root {
-  /* --min-width: 708px;
-  --max-width: 1920px;
-  --max-height: 1080px; */
-  --min-width: 668px;
-  --max-width: 1820px;
-  --max-height: 980px;
   background-color: var(--color-red);
 }
 
@@ -14,28 +8,9 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 767px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  header {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-  }
-
-  nav {
-    height: 45px;
+@media screen and (max-width: 650px) {
+  .hide-in-mobile {
+    display: none;
   }
 }
 
@@ -81,21 +56,6 @@ body {
   clip-path: inherit;
 }
 
-.skills-column {
-  background-color: var(--color-yellow);
-  z-index: 1;
-}
-
-.language-column {
-  background-color: var(--color-lilac);
-  z-index: 2;
-}
-
-.education-column {
-  background-color: var(--color-green);
-  z-index: 3;
-}
-
 @media screen and (max-width: 1200px) {
   .hide-in-small-width {
     display: none;
@@ -105,7 +65,7 @@ body {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #skills-page-grid {
     width: calc(100vw - 100px);
-    height: calc(100vh - 100px);
+    height: 100%;
     transition: 500ms;
     display: grid;
     grid-template-rows: 2.4fr 0.3fr 0.3fr;
@@ -218,6 +178,12 @@ body {
 
 @media screen and (min-width: 768px) {
   body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  body {
     --indent: minmax(0, 1fr);
     --content: minmax(var(--min-width), var(--max-width));
     --content-height: minmax(0, var(--max-height));
@@ -249,6 +215,17 @@ body {
     background-color: var(--color-black);
     position: relative;
     padding: 20px;
+  }
+
+  main {
+    border-top: 2px solid var(--color-black);
+    border-right: 2px solid var(--color-black);
+  }
+
+  header {
+    border-top: 2px solid var(--color-black);
+    border-right: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
   }
 
   .wrapper {
@@ -342,6 +319,21 @@ body {
   /*======================================================================*/
   /*========================== Skills ====================================*/
   /*======================================================================*/
+
+  .skills-column {
+    background-color: var(--color-yellow);
+    z-index: 1;
+  }
+
+  .language-column {
+    background-color: var(--color-lilac);
+    z-index: 2;
+  }
+
+  .education-column {
+    background-color: var(--color-green);
+    z-index: 3;
+  }
 
   .skills-content > h3 {
     margin: 0.5rem 0;
@@ -955,17 +947,6 @@ body {
   }
 }
 
-main {
-  border-top: 2px solid var(--color-black);
-  border-right: 2px solid var(--color-black);
-}
-
-header {
-  border-top: 2px solid var(--color-black);
-  border-right: 2px solid var(--color-black);
-  border-bottom: 2px solid var(--color-black);
-}
-
 footer {
   border: 2px solid var(--color-black);
 }
@@ -990,13 +971,11 @@ footer {
 }
 
 #projects {
-  /* background-color: var(--color-orange); */
   background-color: var(--color-mint);
 }
 
 #contacts {
   background-color: var(--color-lilac);
-  /* background-color: var(--color-mint); */
 }
 
 .menu-list {

@@ -1,0 +1,61 @@
+@media screen and (max-width: 767px) {
+  body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    /* display: flex;
+      justify-content: center;
+      align-items: center; */
+  }
+
+  header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    /* padding-left: 100px; */
+  }
+
+  main {
+    border-top: 1px solid var(--color-black);
+    border-right: 1px solid var(--color-black);
+  }
+
+  header {
+    border-top: 1px solid var(--color-black);
+    border-right: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+  }
+
+  nav {
+    width: 72px;
+    height: 48px;
+    padding: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--color-black);
+  }
+
+  section.page-main {
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+  }
+
+  section.page-main.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+}

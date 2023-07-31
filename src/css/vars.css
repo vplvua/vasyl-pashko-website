@@ -18,7 +18,7 @@
   --gap-xxl: 128px;
 
   /* WIDTH */
-  --width-sm: 592px;
-  --width-md: 794px;
-  --width-full: 100%;
+  --min-width: 668px;
+  --max-width: 1820px;
+  --max-height: 980px;
 }

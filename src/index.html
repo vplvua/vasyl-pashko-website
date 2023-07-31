@@ -7,6 +7,7 @@
     <title>Vasyl Pashko Frontend Developer</title>
     <link rel="stylesheet" href="./css/typography.css" />
     <link rel="stylesheet" href="./css/vars.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="stylesheet" href="./css/layouts.css" />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="stylesheet" href="./css/burger-menu.css" />
@@ -23,10 +24,10 @@
         <div class="ticker-text first-part uppercase-text">
           <p>Download CV!</p>
           <p>For free!</p>
-          <p class="hide-in-small-width">Download CV!</p>
+          <p class="hide-in-small-width hide-in-mobile">Download CV!</p>
         </div>
         <div class="ticker-text second-part uppercase-text">
-          <p class="hide-in-small-width">For free!</p>
+          <p class="hide-in-small-width hide-in-mobile">For free!</p>
           <p>Download CV!</p>
           <p>For free!</p>
         </div>
@@ -36,7 +37,7 @@
       <div class="wrapper">
         <section id="navigation" class="page-main">
           <div class="flex-wrapper">
-            <div class="left">
+            <div class="left hide-in-mobile">
               <div class="page-center">
                 <a href="#home" class="menu-item link-href"
                   ><img src="./images/go_left.svg" alt="Go" class="icon"
@@ -70,7 +71,7 @@
                   </div>
                 </div>
               </div>
-              <div class="right">
+              <div class="right hide-in-mobile">
                 <div class="page-center">
                   <a href="#navigation" class="menu-item link-href"
                     ><img src="./images/go_right.svg" alt="Go" class="icon"
@@ -850,7 +851,7 @@
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="hide-in-mobile">
       <div class="contact-icons">
         <ul>
           <li><img src="images/linkedin.svg" alt="LinkedIn" class="icon" /></li>
