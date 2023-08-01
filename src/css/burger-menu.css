@@ -39,11 +39,11 @@
 }
 
 #burger-toggle:checked ~ .burger-icon:before {
-  transform: rotate(-22deg);
+  transform: rotate(-21deg);
 }
 
 #burger-toggle:checked ~ .burger-icon:after {
-  transform: rotate(22deg);
+  transform: rotate(21deg);
 }
 
 @media screen and (min-width: 768px) {

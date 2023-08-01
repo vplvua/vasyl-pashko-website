@@ -8,15 +8,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Oswald:wght@600&family=Roboto+Slab:wght@300&display=swap");
 
-/* для виділеного тексту на бекграунді*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
-
 /* main header */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
 
 :root {
   font-family: "Archivo Narrow", sans-serif;
+  font-size: 16px;
 }
 
 .heading-xl {
@@ -55,19 +52,60 @@
 }
 
 .icon {
-  margin-top: var(--gap-md);
-  width: 60px;
-  transition: transform 0.3s ease;
+  width: 36px;
 }
 
-.icon:hover {
-  transform: scale(1.3);
+.menu-list a {
+  text-decoration: none;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: calc(100vw * 168 / 1200);
+  line-height: calc(100vw * 130 / 1200);
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-text-stroke: 1px var(--color-black);
+  color: transparent;
+  text-transform: uppercase;
+  overflow: hidden;
+  transform: rotateY(-30deg);
+  padding-right: var(--gap-md);
+  transform-origin: right center;
+  transition: transform 0.5s linear, color 0.5s linear;
 }
 
-@media screen and (max-width: 992px) {
+.menu-list a:hover {
+  -webkit-text-stroke: 1px fff;
+  color: var(--color-black);
+  transform: rotateY(-15deg);
+}
+
+.menu-list a:hover ~ a {
+  transform: rotateY(-30deg);
+  color: transparent;
+}
+
+@media screen and (max-width: 767px) {
   .heading-xl {
-    /* font-size: 120px;
-    line-height: 98px; */
+    font-size: calc(100vw * 134 / 767);
+    line-height: calc(100vw * 108 / 767);
+  }
+
+  .heading-md {
+    font-size: calc(100vw * 40 / 767);
+    line-height: calc(100vw * 48 / 767);
+  }
+
+  .menu-list a {
+    font-size: calc(100vw * 168 / 767);
+    line-height: calc(100vw * 130 / 767);
+
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .heading-xl {
     font-size: calc(100vw * 148 / 1100);
     line-height: calc(100vw * 120 / 1100);
   }
@@ -84,46 +122,7 @@
 @media screen and (min-width: 392px) {
 }
 
-@media screen and (max-width: 592px) {
-  .heading-xl {
-    font-size: 100px;
-    line-height: 90px;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  .menu-list a {
-    text-decoration: none;
-    display: block;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    /* font-size: 148px; */
-    font-size: calc(100vw * 168 / 1200);
-    /* line-height: 120px; */
-    line-height: calc(100vw * 130 / 1200);
-    font-style: normal;
-    font-stretch: normal;
-    -webkit-text-stroke: 1px var(--color-black);
-    color: transparent;
-    text-transform: uppercase;
-    overflow: hidden;
-    transform: rotateY(-30deg);
-    padding-right: var(--gap-md);
-    transform-origin: right center;
-    transition: transform 0.5s linear, color 0.5s linear;
-  }
-
-  .menu-list a:hover {
-    -webkit-text-stroke: 1px fff;
-    color: var(--color-black);
-    transform: rotateY(-15deg);
-  }
-
-  .menu-list a:hover ~ a {
-    transform: rotateY(-30deg);
-    color: transparent;
-  }
-
   p,
   .scroll-down span {
     font-size: 1.3rem;
@@ -134,15 +133,22 @@
     line-height: 1.8rem;
   }
 
+  .icon {
+    margin-top: var(--gap-md);
+    width: 60px;
+    transition: transform 0.3s ease;
+  }
+
+  .icon:hover {
+    transform: scale(1.3);
+  }
+
   .skills-header {
     width: 100%;
     height: 160px;
-    /* writing-mode: vertical-lr; */
-    /* text-orientation: mixed; */
   }
 
   .skills-header h1 {
-    /* transform: rotate(180deg); */
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-size: 132px;
@@ -151,7 +157,6 @@
     -webkit-text-stroke: 1px var(--color-black);
     color: transparent;
     line-height: 130px;
-    text-transform: uppercase;
     cursor: default;
   }
 
@@ -161,18 +166,13 @@
 
   .language-content h2,
   .language-content h3,
-  /* .education-content h2,
-  .education-content h3, */
   .project-name h3,
   .contacts-content h3 {
     font-family: "Montserrat", sans-serif;
   }
 
   .language-content h2,
-  .language-content h3
-
-  /* .education-content h2,
-  .education-content h3  */ {
+  .language-content h3 {
     font-size: 28px;
     margin-left: 1rem;
   }
@@ -183,14 +183,12 @@
     margin-top: var(--gap-lg);
   }
 
-  .language-content h2
-  /* .education-content h2  */ {
+  .language-content h2 {
     font-weight: 900;
   }
 
   .language-content h3,
-  .contacts-content h3
-  /* .education-content h3  */ {
+  .contacts-content h3 {
     font-weight: 600;
   }
 
@@ -204,11 +202,6 @@
   .project-links a {
     font-size: 1.3rem;
     color: var(--color-black);
-    /* padding: var(--gap-sm) 0; */
-  }
-
-  .project-date {
-    text-transform: uppercase;
   }
 
   .timeline-content h2,
