@@ -85,6 +85,38 @@
   color: transparent;
 }
 
+p,
+.scroll-down span {
+  font-size: 1.3rem;
+  padding: var(--gap-sm) 0;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+.contacts-content h2 {
+  font-weight: 900;
+  margin: 0;
+  padding: var(--gap-sm);
+  font-size: 28px;
+  font-family: Montserrat, sans-serif;
+}
+
+.contacts-content h2:hover {
+  background-color: var(--color-red);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contacts-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  margin-top: var(--gap-lg);
+}
+
 @media screen and (max-width: 767px) {
   .heading-xl {
     font-size: calc(100vw * 134 / 767);
@@ -123,16 +155,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  p,
-  .scroll-down span {
-    font-size: 1.3rem;
-    padding: var(--gap-sm) 0;
-  }
-
-  p {
-    line-height: 1.8rem;
-  }
-
   .icon {
     margin-top: var(--gap-md);
     width: 60px;
@@ -166,8 +188,7 @@
 
   .language-content h2,
   .language-content h3,
-  .project-name h3,
-  .contacts-content h3 {
+  .project-name h3 {
     font-family: "Montserrat", sans-serif;
   }
 
@@ -177,18 +198,11 @@
     margin-left: 1rem;
   }
 
-  .contacts-content h3 {
-    font-size: 28px;
-    margin-left: 0.5rem;
-    margin-top: var(--gap-lg);
-  }
-
   .language-content h2 {
     font-weight: 900;
   }
 
-  .language-content h3,
-  .contacts-content h3 {
+  .language-content h3 {
     font-weight: 600;
   }
 
@@ -204,8 +218,7 @@
     color: var(--color-black);
   }
 
-  .timeline-content h2,
-  .contacts-content h2 {
+  .timeline-content h2 {
     font-weight: 900;
     margin: 0;
     padding: var(--gap-sm);
@@ -213,8 +226,7 @@
     font-family: Montserrat, sans-serif;
   }
 
-  .timeline-content h2:hover,
-  .contacts-content h2:hover {
+  .timeline-content h2:hover {
     background-color: var(--color-red);
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;

@@ -24,16 +24,17 @@
 
 .animation div:first-child {
   animation: text-changing 8s infinite;
+  animation-delay: 2s;
 }
 
 .first div {
-  background-color: var(--color-lilac);
+  background-color: var(--color-yellow);
 }
 .second div {
-  background-color: var(--color-green);
+  background-color: var(--color-lilac);
 }
 .third div {
-  background-color: var(--color-yellow);
+  background-color: var(--color-green);
 }
 
 @keyframes text-changing {
@@ -286,4 +287,83 @@
 
 .project-card.flipped .project-card-back-content {
   transform: rotateY(360deg);
+}
+
+/*=========================================================*/
+/*=================== icon animations ======================*/
+/*=========================================================*/
+
+.contact-icons li:nth-child(1) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.contact-icons li:nth-child(2) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.contact-icons li:nth-child(3) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+.contact-icons li:nth-child(4) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.contact-icons li:nth-child(5) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+.contact-icons li:nth-child(6) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+/*=========================================================*/
+/*================== Header appearence ====================*/
+/*=========================================================*/
+
+.heading-xl {
+  overflow: hidden;
+}
+
+.animated-header {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  animation: appearence 2s forwards;
+}
+
+@keyframes appearence {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -94,7 +94,139 @@
   justify-content: right;
 }
 
+/*========================================================================*/
+/*=========================== Contacts ===================================*/
+/*========================================================================*/
+
+.contacts-content p {
+  margin: 0 var(--gap-sm);
+}
+
+#send-email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: var(--gap-md) 0;
+  color: var(--color-black);
+}
+
+#send-email-form input,
+#send-email-form textarea {
+  margin: var(--gap-sm) 0;
+  padding: var(--gap-md);
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--color-black);
+  background-color: inherit;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#send-email-form textarea {
+  height: 100px;
+}
+
+#send-email-form input:hover,
+#send-email-form textarea:hover {
+  opacity: 1;
+  color: #fff;
+  border-left: 2px solid var(--color-red);
+}
+
+#send-email-form input:focus,
+#send-email-form textarea:focus {
+  opacity: 1;
+  color: #fff;
+  border: 0;
+  border-left: 2px solid var(--color-red);
+  outline: none;
+}
+
+#send-email-form button {
+  display: block;
+  margin: var(--gap-lg) 0;
+  padding: var(--gap-sm);
+  border: none;
+  width: 100%;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--color-red);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.scroll-contacts {
+  height: 100%;
+  width: 100%;
+}
+
+.contacts-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts-flex-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contacts-additional-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.scroll-contacts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.contacts-wrapper {
+  overflow-y: scroll;
+}
+
+.email-form {
+  width: 100%;
+}
+
+.contacts-flex-wrapper {
+  justify-content: flex-start;
+}
+
+.lets-connect {
+  padding: var(--gap-lg);
+}
+
+@media screen and (max-width: 576px) {
+  .contacts-additional-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .scroll-about-me {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
   #skills-page-grid {
     width: calc(100vw - 100px);
     height: 100%;
@@ -167,44 +299,15 @@
     height: 63%;
   }
 
-  .contacts-flex-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  #send-email-form button {
+    color: var(--color-black);
+    background-color: inherit;
   }
 
-  .contacts-additional-info {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .scroll-contacts {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-  }
-
-  .contacts-wrapper {
-    overflow-y: scroll;
-  }
-
-  .email-form {
-    width: 80vw;
-  }
-
-  .contacts-flex-wrapper {
-    justify-content: flex-start;
-  }
-
-  .lets-connect {
-    padding: 2rem;
+  #send-email-form button:hover {
+    color: #fff;
+    background-color: var(--color-red);
+    cursor: pointer;
   }
 }
 
@@ -295,17 +398,6 @@
   .half-width {
     width: 80%;
     max-width: 80%;
-  }
-
-  .scroll-about-me {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: scroll;
-    height: 100%;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
   }
 
   .about-me-flex-wrapper {
@@ -717,85 +809,6 @@
     margin-right: 0.5rem;
     margin-top: 0.5rem;
   }
-
-  /*========================================================================*/
-  /*=========================== Contacts ===================================*/
-  /*========================================================================*/
-
-  .contacts-content p {
-    margin: 0 var(--gap-sm);
-  }
-
-  #send-email-form {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin: var(--gap-md) 0;
-    color: var(--color-black);
-  }
-
-  #send-email-form input,
-  #send-email-form textarea {
-    margin: var(--gap-sm) 0;
-    padding: var(--gap-md);
-    border: none;
-    width: 100%;
-    font-size: 1.2rem;
-    color: var(--color-black);
-    background-color: inherit;
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  #send-email-form textarea {
-    height: 100px;
-  }
-
-  #send-email-form input:hover,
-  #send-email-form textarea:hover {
-    opacity: 1;
-    color: #fff;
-    border-left: 2px solid var(--color-red);
-  }
-
-  #send-email-form input:focus,
-  #send-email-form textarea:focus {
-    opacity: 1;
-    color: #fff;
-    border: 0;
-    border-left: 2px solid var(--color-red);
-    outline: none;
-  }
-
-  #send-email-form button {
-    display: block;
-    margin: var(--gap-lg) 0;
-    padding: var(--gap-sm);
-    border: none;
-    width: 100%;
-    font-size: 28px;
-    color: var(--color-black);
-    font-weight: 600;
-    background-color: inherit;
-    text-transform: uppercase;
-  }
-
-  #send-email-form button:hover {
-    color: #fff;
-    background-color: var(--color-red);
-    cursor: pointer;
-  }
-
-  .scroll-contacts {
-    height: 100%;
-    width: 100%;
-  }
-
-  .contacts-wrapper {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media screen and (min-width: 800px) {
@@ -807,6 +820,17 @@
 @media screen and (min-width: 992px) {
   .about-me-flex-wrapper {
     flex-direction: row;
+    height: calc(100vh - 100px);
+  }
+
+  .scroll-about-me-text {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    overflow: scroll;
+    height: 100%;
+    width: 45vw;
+    padding: var(--gap-lg);
   }
 
   .half-width {
@@ -909,11 +933,21 @@
   .contacts-content div.additional-info {
     width: 100%;
   }
+
+  .contacts-additional-info {
+    display: block;
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1250px) {
   .about-me-flex-wrapper {
-    height: 100%;
+    height: calc(100vh - 100px);
+  }
+
+  .scroll-about-me-text {
+    position: relative;
+    left: 0;
   }
 
   .frame {
