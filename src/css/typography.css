@@ -117,6 +117,65 @@ p {
   margin-top: var(--gap-lg);
 }
 
+.scroll-skills > h3 {
+  margin: 0.5rem 0;
+  padding: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-red);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-skills > h3:hover {
+  color: white;
+  background-color: var(--color-red);
+}
+
+.scroll-skills > h3 span {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: var(--color-black);
+}
+
+.language-content h2,
+.language-content h3,
+.project-name h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.language-content h2,
+.language-content h3 {
+  font-size: 28px;
+  margin-left: 1rem;
+}
+
+.language-content h2 {
+  font-weight: 900;
+}
+
+.language-content h3 {
+  font-weight: 600;
+}
+
+.skills-header {
+  width: 100%;
+  height: var(--gap-xl);
+}
+
+.skills-header h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-text-stroke: 1px var(--color-black);
+  color: transparent;
+  line-height: 80px;
+  cursor: default;
+}
+
 @media screen and (max-width: 767px) {
   .heading-xl {
     font-size: calc(100vw * 134 / 767);
@@ -166,44 +225,16 @@ p {
   }
 
   .skills-header {
-    width: 100%;
     height: 160px;
   }
 
   .skills-header h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
     font-size: 132px;
-    font-style: normal;
-    font-stretch: normal;
-    -webkit-text-stroke: 1px var(--color-black);
-    color: transparent;
     line-height: 130px;
-    cursor: default;
   }
 
   .terrorist-state-language {
     font-size: 0.5rem;
-  }
-
-  .language-content h2,
-  .language-content h3,
-  .project-name h3 {
-    font-family: "Montserrat", sans-serif;
-  }
-
-  .language-content h2,
-  .language-content h3 {
-    font-size: 28px;
-    margin-left: 1rem;
-  }
-
-  .language-content h2 {
-    font-weight: 900;
-  }
-
-  .language-content h3 {
-    font-weight: 600;
   }
 
   .project-name h3 {

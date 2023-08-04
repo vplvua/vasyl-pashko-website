@@ -79,7 +79,7 @@
     left: 0;
     width: 100%;
     height: calc(100vh - 96px);
-    padding: var(--gap-md);
+    /* padding: var(--gap-md); */
   }
 
   section.page-main.active {
@@ -91,5 +91,10 @@
   .right {
     width: 100%;
     height: 100%;
+  }
+
+  #contacts .left,
+  #about-me .left {
+    padding: 0 var(--gap-md);
   }
 }
