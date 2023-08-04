@@ -145,10 +145,14 @@ p {
   font-family: "Montserrat", sans-serif;
 }
 
-.language-content h2,
-.language-content h3 {
+.language-content h2 {
   font-size: 28px;
   margin-left: 1rem;
+}
+
+.language-content h3 {
+  font-size: 28px;
+  margin-left: auto;
 }
 
 .language-content h2 {
@@ -174,6 +178,20 @@ p {
   color: transparent;
   line-height: 80px;
   cursor: default;
+}
+
+.timeline-content h2 {
+  font-weight: 900;
+  margin: 0;
+  padding: var(--gap-sm);
+  font-size: 28px;
+  font-family: Montserrat, sans-serif;
+}
+
+.timeline-content h2:hover {
+  background-color: var(--color-red);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media screen and (max-width: 767px) {
@@ -249,7 +267,7 @@ p {
     color: var(--color-black);
   }
 
-  .timeline-content h2 {
+  /* .timeline-content h2 {
     font-weight: 900;
     margin: 0;
     padding: var(--gap-sm);
@@ -261,7 +279,7 @@ p {
     background-color: var(--color-red);
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+  } */
 }
 
 @media screen and (min-width: 992px) {
