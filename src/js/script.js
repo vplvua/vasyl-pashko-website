@@ -39,8 +39,6 @@ projectCards.forEach((card) => {
 
 function applyCardFunctionality() {
   if (window.innerWidth >= 768) {
-    // const scrollingWrapper = document.querySelector(".scrolling-wrapper");
-
     projectCards.forEach((card) => {
       card.style.transform = "none";
     });
@@ -49,7 +47,6 @@ function applyCardFunctionality() {
 
     scrollingWrapper.addEventListener("wheel", handleScroll);
   } else {
-    // const scrollingWrapper = document.querySelector(".scrolling-wrapper");
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
     let currentCardIndex = 0;
@@ -58,15 +55,19 @@ function applyCardFunctionality() {
 
     function showPreviousCard() {
       if (currentCardIndex > 0) {
+        projectCards[currentCardIndex].classList.remove("active");
         currentCardIndex--;
         updateVisibleCard();
+        projectCards[currentCardIndex].classList.add("active");
       }
     }
 
     function showNextCard() {
       if (currentCardIndex < projectCards.length - 1) {
+        projectCards[currentCardIndex].classList.remove("active");
         currentCardIndex++;
         updateVisibleCard();
+        projectCards[currentCardIndex].classList.add("active");
       }
     }
 
@@ -86,8 +87,6 @@ function applyCardFunctionality() {
 }
 
 function handleScroll(event) {
-  // const scrollingWrapper = document.querySelector(".scrolling-wrapper");
-
   event.preventDefault();
   scrollingWrapper.scrollLeft += event.deltaY;
 }
