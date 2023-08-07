@@ -28,20 +28,73 @@ function showSection(sectionId) {
 
 // Horizontal Scroll Pproject Cards
 
+const projectCards = document.querySelectorAll(".project-card");
 const scrollingWrapper = document.querySelector(".scrolling-wrapper");
 
-scrollingWrapper.addEventListener("wheel", (event) => {
-  event.preventDefault();
-  scrollingWrapper.scrollLeft += event.deltaY;
-});
-
-const projectCard = document.querySelectorAll(".project-card");
-
-projectCard.forEach((card) => {
+projectCards.forEach((card) => {
   card.addEventListener("click", function () {
     this.classList.toggle("flipped");
   });
 });
+
+function applyCardFunctionality() {
+  if (window.innerWidth >= 768) {
+    // const scrollingWrapper = document.querySelector(".scrolling-wrapper");
+
+    projectCards.forEach((card) => {
+      card.style.transform = "none";
+    });
+
+    scrollingWrapper.removeEventListener("wheel", handleScroll);
+
+    scrollingWrapper.addEventListener("wheel", handleScroll);
+  } else {
+    // const scrollingWrapper = document.querySelector(".scrolling-wrapper");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    let currentCardIndex = 0;
+
+    scrollingWrapper.removeEventListener("wheel", handleScroll);
+
+    function showPreviousCard() {
+      if (currentCardIndex > 0) {
+        currentCardIndex--;
+        updateVisibleCard();
+      }
+    }
+
+    function showNextCard() {
+      if (currentCardIndex < projectCards.length - 1) {
+        currentCardIndex++;
+        updateVisibleCard();
+      }
+    }
+
+    function updateVisibleCard() {
+      projectCards.forEach((card, index) => {
+        card.style.transform = `translateX(${
+          (index - currentCardIndex) * 100
+        }%)`;
+      });
+    }
+
+    leftArrow.addEventListener("click", showPreviousCard);
+    rightArrow.addEventListener("click", showNextCard);
+
+    updateVisibleCard();
+  }
+}
+
+function handleScroll(event) {
+  // const scrollingWrapper = document.querySelector(".scrolling-wrapper");
+
+  event.preventDefault();
+  scrollingWrapper.scrollLeft += event.deltaY;
+}
+
+applyCardFunctionality();
+
+window.addEventListener("resize", applyCardFunctionality);
 
 // Send message
 
