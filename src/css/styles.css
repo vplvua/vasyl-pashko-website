@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 767px) {
   .hide-in-mobile {
     display: none;
@@ -382,7 +389,7 @@ section.page-main.active {
 #skills-page-grid {
   width: 100%;
   /* height: 100%; */
-  height: calc(100vh - 96px);
+  height: 100%;
   transition: 500ms;
   display: grid;
   grid-template-rows: 2.5fr 0.25fr 0.25fr;
@@ -756,12 +763,6 @@ section.page-main.active {
 }
 
 @media screen and (max-width: 767px) {
-  body {
-    overflow: hidden;
-    height: 100vh;
-    width: 100%;
-  }
-
   header {
     position: fixed;
     bottom: 0;
@@ -859,7 +860,7 @@ section.page-main.active {
 
   .scrolling-wrapper .project-card {
     width: 100vw;
-    height: calc(100vh - 96px);
+    height: 100%;
     padding: var(--gap-md);
     position: absolute;
     transition: transform 0.5s;
@@ -868,7 +869,7 @@ section.page-main.active {
   .project-card-content,
   .project-card-back-content {
     width: calc(100vw - 32px);
-    height: calc(100vh - 128px);
+    height: calc(100% - 32px);
     border: 2px solid var(--color-black);
     display: flex;
     flex-direction: column;
@@ -1052,7 +1053,7 @@ section.page-main.active {
 
 @media screen and (min-width: 768px) {
   body {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow: hidden;
   }
