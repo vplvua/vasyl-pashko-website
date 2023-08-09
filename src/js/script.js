@@ -1,3 +1,7 @@
+// ============================================================= //
+// =================== Burger Menu ============================= //
+// ============================================================= //
+
 const burgerToggle = document.getElementById("burger-toggle");
 const sections = document.querySelectorAll("section.page-main");
 const menuLinks = document.querySelectorAll(".link-href");
@@ -16,7 +20,6 @@ menuLinks.forEach((link) => {
     const target = link.getAttribute("href").substring(1);
     burgerToggle.checked = false;
     showSection(target);
-    // smoothScrollTo(target);
   });
 });
 
@@ -26,7 +29,9 @@ function showSection(sectionId) {
   });
 }
 
-// Horizontal Scroll Pproject Cards
+// ============================================================= //
+// ========== Horizontal Scroll Pproject Cards ================= //
+// ============================================================= //
 
 const projectCards = document.querySelectorAll(".project-card");
 const scrollingWrapper = document.querySelector(".scrolling-wrapper");
@@ -95,7 +100,9 @@ applyCardFunctionality();
 
 window.addEventListener("resize", applyCardFunctionality);
 
-// Send message
+// ============================================================= //
+// ===================== Send message ========================== //
+// ============================================================= //
 
 const form = document.getElementById("send-email-form");
 const successMessage = document.getElementById("success-message");

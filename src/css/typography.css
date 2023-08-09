@@ -266,32 +266,6 @@ p {
   .terrorist-state-language {
     font-size: 0.5rem;
   }
-
-  /* .project-name h3 {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .project-date,
-  .project-technologies,
-  .project-links a {
-    font-size: 1.3rem;
-    color: var(--color-black);
-  } */
-
-  /* .timeline-content h2 {
-    font-weight: 900;
-    margin: 0;
-    padding: var(--gap-sm);
-    font-size: 28px;
-    font-family: Montserrat, sans-serif;
-  }
-
-  .timeline-content h2:hover {
-    background-color: var(--color-red);
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  } */
 }
 
 @media screen and (min-width: 992px) {
