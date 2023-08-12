@@ -1369,7 +1369,11 @@ section.page-main.active {
 @media screen and (min-width: 992px) {
   .about-me-flex-wrapper {
     flex-direction: row;
-    height: calc(100vh - 100px);
+    height: 100%;
+  }
+
+  .scroll-about-me {
+    overflow: hidden;
   }
 
   .scroll-about-me-text {
