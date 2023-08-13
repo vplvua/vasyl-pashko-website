@@ -853,6 +853,7 @@ section.page-main.active {
     flex-direction: column;
     align-items: center;
     margin: var(--gap-md);
+    background-color: var(--color-mint);
   }
 
   .project-image,
@@ -1005,17 +1006,6 @@ section.page-main.active {
 
   .scroll-skills {
     padding: var(--gap-md);
-  }
-
-  #send-email-form button {
-    color: var(--color-black);
-    background-color: inherit;
-  }
-
-  #send-email-form button:hover {
-    color: #fff;
-    background-color: var(--color-red);
-    cursor: pointer;
   }
 
   .language-content {
@@ -1284,6 +1274,12 @@ section.page-main.active {
 
   .project-description {
     padding: var(--gap-md) var(--gap-md) 0 var(--gap-md);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .project-description::-webkit-scrollbar {
+    display: none;
   }
 
   .project-technologies {
@@ -1345,6 +1341,17 @@ section.page-main.active {
 
   .arrow {
     display: none;
+  }
+
+  #send-email-form button {
+    color: var(--color-black);
+    background-color: inherit;
+  }
+
+  #send-email-form button:hover {
+    color: #fff;
+    background-color: var(--color-red);
+    cursor: pointer;
   }
 }
 
